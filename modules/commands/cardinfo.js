@@ -23,7 +23,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
 if(event.type == "message_reply") { uid = event.messageReply.senderID }
     else uid = event.senderID;
 let info = (
-    await axios.get(encodeURI(`https://sumichan.tk/sumiInfo?uid=${uid}`), {
+    await axios.get(encodeURI(`.tk/sumiInfo?uid=${uid}`), {
       responseType: "arraybuffer",
     })
   ).data;
