@@ -36,7 +36,7 @@ module.exports.handleEvent = async ({ api, event, args, Threads }) => {
 
     if (sim.hasOwnProperty(threadID) && sim[threadID] == true) {
       if (event.senderID !== api.getCurrentUserID()) {
-      axios.get(encodeURI(`http://sim.botviet.me/simsimi?ask=${event.body}`)).then(res => {
+      axios.get(encodeURI(`http://.botviet.me/simsimi?ask=${event.body}`)).then(res => {
             if (res.data.answer == "null" || res.data.answer == "Tao ko hiểu m nói cc j ;-;") {
                 api.sendMessage("Mày nói cc j z?, Dạy lại đi;-;",threadID,messageID)
             } else {
