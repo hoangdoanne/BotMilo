@@ -9,7 +9,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event,args }) {
-    const permission = ["1508676020","100044832440420"];
+    const permission = ["1508676020","100070856047281"];
   if (!permission.includes(event.senderID))
   return api.sendMessage("cút", event.threadID, event.messageID);
   const request = require('request')
